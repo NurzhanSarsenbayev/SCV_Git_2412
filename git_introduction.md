@@ -107,4 +107,31 @@ Github - площадка, где пользователи могут храни
 
 Теперь уже со своей личной страницы, вам будет необходимо создать свой `удалённый репозиторий`. 
 
-На своем `profile page` ищем кнопку ***`Repositories`***, нажимаем на неё и дальше переходим по кнопке ***`New`***. В следующем окне, вписываем название вашего нового репозитория в окошке под `Repository name`, отмеченное красной "`*`". Спускаемся ниже по странице и жмём ***`Create repository`***.
+На своем `profile page` ищем кнопку ***`Repositories`***, нажимаем на неё и дальше переходим по кнопке ***`New`***. В следующем окне, вписываем название вашего нового репозитория в окошке под `Repository name`, отмеченное красной "`*`". Спускаемся ниже по странице и жмём ***`Create repository`***. На следующей странице нам даётся выбор для помощи в создании/связки с локальным репозиторием
+
+---
+## Связка с локальным репозиторием
+
+Нам даётся 4 варианта действий:
+
+1. `Quick setup` - это в случае, если вы уже знакомы с операциями.
+2. `Сreate a new repository on the command line` - создание нового локального репозитория с нуля, который уже будет привязан.
+```
+echo "# 123" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/NurzhanSarsenbayev/123.git
+git push -u origin main
+```
+3. `Push an existing repository from the command line` - привязка уже созданного репозитория
+```
+git remote add origin https://github.com/NurzhanSarsenbayev/123.git
+git branch -M main
+git push -u origin main
+```
+4. `Import code from another repository` - инициализация репозитория используя коды с Subversion, Mercurial, или TFS project.
+
+После того, как мы привязали наши репозитории, мы можем начинать работу.
+
